@@ -1,1 +1,24 @@
-<p>create-kitten works!</p>
+<form class="form-container" #myForm="ngForm" (ngSubmit)="myForm.valid && createKitten()" >
+    <label for="name">Nom du chaton</label>
+    <input type="text" id="name" name="name" [(ngModel)]="kitten.name" #nameState="ngModel" required>
+    <div *ngIf="nameState.valid && (myForm.dirty || myForm.touched)">
+        <small *ngIf="nameState.errors?.['required']">le champs est requis</small>
+    </div>
+    <label for="breed">Race</label>
+    <input type="text" id="breed" name="breed"  [(ngModel)]="kitten.breed" #breedState="ngModel" required>
+    <div *ngIf="breedState.valid && (myForm.dirty || myForm.touched)">
+        <small *ngIf="breedState.errors?.['required']">le champs est requis</small>
+    </div>
+    <label for="birthdate">Date de naissance</label>
+    <input type="text" id="birthdate" name="birthdate" [(ngModel)]="kitten.birthdate" #birthdateState="ngModel" required> 
+    <div *ngIf="birthdateState.valid && (myForm.dirty || myForm.touched)">
+        <small *ngIf="birthdateState.errors?.['required']">le champs est requis</small>
+    </div>
+    <label for="picture">photo de la bestiole</label>
+    <input type="text" id="picture" name="picture" [(ngModel)]="kitten.pictureSrc" #pictureState="ngModel" required>
+    <div *ngIf="pictureState.valid && (myForm.dirty || myForm.touched)">
+        <small *ngIf="pictureState.errors?.['required']">le champs est requis</small>
+    </div>
+    <button type="submit" [ngClass]="{'valid': myForm.valid}">Créer un chaton</button>
+
+</form>

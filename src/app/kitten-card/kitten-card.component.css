@@ -1,0 +1,23 @@
+.card-kitten {
+width: 200px;
+height: 300px;
+overflow: hidden;
+border-radius: 8px;
+box-shadow: 9px 5px 5px darkgrey;;
+}
+
+.kitten-image{
+    height: 100%;
+    overflow: hidden;
+}
+.kitten-image img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: 50% -10%;
+}
+
+.kitten-image:hover {
+    height: 40%;
+    
+}

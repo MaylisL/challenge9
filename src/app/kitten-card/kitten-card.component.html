@@ -1,0 +1,13 @@
+<div class="card-kitten">
+    <div class="kitten-image">
+        <img [src]="kittenChild.pictureSrc" alt="kitten is too cute">
+    </div>
+    <div class="kitten-description">
+        <h2 class="kitten-name">{{kittenChild.name}}</h2>
+        <p class="kitten birthdate">{{kittenChild.birthdate}}</p>
+        <p class="kitten-breed">{{kittenChild.breed}}</p>
+    </div>
+    <button type="button" (click)="AddToUserkitten()">Adoptez moiiiiiiiii</button>
+</div>
+
+<!-- with *ngIf , (mouseevent) display kitten description ou class-->

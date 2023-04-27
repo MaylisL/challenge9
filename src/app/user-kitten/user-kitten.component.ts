@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Kitten } from '../models/kitten.models';
+
 
 @Component({
   selector: 'app-user-kitten',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class UserKittenComponent {
 
+  @Input() adoptedKittenList: Kitten[] = []
 }

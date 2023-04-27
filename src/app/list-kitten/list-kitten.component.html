@@ -1,1 +1,8 @@
-<p>list-kitten works!</p>
+<div class="cards-container">
+    <app-kitten-card 
+    *ngFor="let kitten of kittenListChild" 
+    [kittenChild]="kitten"
+    (sendAdoptedKittenToList)="receivedAdoptedKittenFromCard($event)"></app-kitten-card>
+</div>
+
+<!-- affiche toutes les cartes chat en foction du tableau -->

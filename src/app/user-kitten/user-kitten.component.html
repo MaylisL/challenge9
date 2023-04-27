@@ -1,1 +1,3 @@
-<p>user-kitten works!</p>
+<div class="kitten-image" *ngFor="let oneAdoptedKitten of adoptedKittenList">
+    <img [src]="oneAdoptedKitten.pictureSrc" alt="image description of a cat adopted">
+</div>
